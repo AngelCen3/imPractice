@@ -1,0 +1,35 @@
+/* Botón básico con estilo verde y esquinas redondeadas */
+.basic-button {
+    background-color: #4CAF50; /* Color de fondo verde */
+    border: none; /* Sin borde */
+    color: white; /* Texto en color blanco */
+    padding: 15px 32px; /* Espaciado interno: 15px arriba y abajo, 32px a los lados */
+    text-align: center; /* Centrar el texto dentro del botón */
+    text-decoration: none; /* Elimina cualquier subrayado u otra decoración de texto */
+    display: inline-block; /* Define el botón como un elemento en línea, que respeta el flujo del texto */
+    font-size: 16px; /* Tamaño de la fuente del texto dentro del botón */
+    margin: 4px 2px; /* Espaciado exterior: 4px arriba y abajo, 2px a los lados */
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar sobre el botón */
+    border-radius: 8px; /* Esquinas redondeadas de 8px */
+}
+
+/* Estilo al pasar el ratón por encima del botón (hover) */
+.basic-button:hover {
+    background-color: #45a049; /* Cambia el color de fondo a un verde más oscuro */
+}
+
+
+/* Botón con SVG como fondo */
+.svg-button {
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60"><rect width="200" height="60" rx="15" ry="15" style="fill:%234CAF50;"/><text x="50%25" y="50%25" fill="white" font-size="20" text-anchor="middle" dy=".3em">Haz clic aquí</text></svg>');
+    background-size: cover; /* Asegura que el SVG cubra todo el botón */
+    border: none;
+    width: 200px; /* Ancho del botón */
+    height: 60px; /* Altura del botón */
+    cursor: pointer; /* Cambia el cursor a un puntero */
+    text-indent: -9999px; /* Oculta el texto del botón, ya que el texto está en el SVG */
+}
+
+.svg-button:hover {
+    filter: brightness(0.9); /* Hace que el botón se vea un poco más oscuro al pasar el ratón */
+}
