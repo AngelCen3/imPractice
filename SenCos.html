@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación con Senos y Cosenos</title>
+    <style>
+        .circle {
+            width: 50px;
+            height: 100px;
+            background-color: rgb(21, 255, 0);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="circle" id="circle"></div>
+    <script>
+        const circle = document.getElementById('circle');
+        let angle = 0;
+
+        function animate() {
+            const x = 150 * Math.cos(angle); // Coseno para moverlo en el eje X
+            const y = 150 * Math.sin(angle); // Seno para moverlo en el eje Y
+
+            circle.style.transform = `translate(${x}px, ${y}px)`;
+            angle += 0.05; // Incrementa el ángulo
+
+            requestAnimationFrame(animate); // Hace que la animación sea continua
+        }
+
+        animate();
+    </script>
+</body>
+</html>

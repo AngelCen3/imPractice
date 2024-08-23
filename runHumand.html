@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running Person Animation</title>
+    <style>
+        /* Estilos CSS para la animación */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .runner {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Animación de la persona corriendo */
+        @keyframes runCycle {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(300px); }
+        }
+
+        @keyframes moveLegs {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(30deg); }
+        }
+
+        .runner .body {
+            animation: runCycle 2s linear infinite;
+        }
+
+        .runner .left-leg, .runner .right-leg {
+            animation: moveLegs 0.5s linear infinite;
+        }
+    </style>
+</head>
+<body>
+
+<div class="runner">
+    <!-- SVG para la persona corriendo -->
+    <svg viewBox="0 0 100 100">
+        <!-- Cuerpo -->
+        <circle class="body" cx="50" cy="50" r="10" fill="#000" />
+        <!-- Pierna izquierda -->
+        <line class="left-leg" x1="50" y1="60" x2="40" y2="80" stroke="#000" stroke-width="2"/>
+        <!-- Pierna derecha -->
+        <line class="right-leg" x1="50" y1="60" x2="60" y2="80" stroke="#000" stroke-width="2"/>
+    </svg>
+</div>
+
+<script>
+    // JavaScript para iniciar la animación (si se desea controlar o agregar interactividad)
+    document.addEventListener('DOMContentLoaded', function () {
+        const runner = document.querySelector('.runner');
+        runner.style.animation = 'runCycle 2s linear infinite';
+    });
+</script>
+
+</body>
+</html>

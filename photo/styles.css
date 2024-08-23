@@ -1,0 +1,26 @@
+/* Contenedor de la imagen */
+.image-container {
+    display: inline-block;
+    overflow: hidden;
+    width: 300px; /* Ajusta este valor al tamaño de tu imagen */
+    height: 400px; /* Ajusta este valor al tamaño de tu imagen */
+    border-radius: 50% 50% 0 0; /* Borde redondeado arriba, cuadrado abajo */
+    transition: border-radius 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+/* Estilo de la imagen */
+.styled-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+/* Efecto al pasar el mouse */
+.image-container:hover {
+    border-radius: 50%; /* Borde completamente redondeado */
+}
+
+.image-container:hover .styled-image {
+    transform: scale(1.05); /* Un ligero aumento en el tamaño al pasar el mouse */
+}

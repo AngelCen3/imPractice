@@ -1,0 +1,57 @@
+/* Estilo básico para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Fondo gris claro */
+}
+
+/* Estilo para el contenedor del dashboard */
+.dashboard {
+    width: 250px; /* Ancho del menú */
+    background-color: #333; /* Fondo oscuro para el menú */
+    position: fixed; /* Fijo en la pantalla, siempre visible */
+    height: 100%; /* Ocupa toda la altura de la pantalla */
+    overflow: auto; /* Permite hacer scroll si el contenido es muy largo */
+    color: #fff; /* Color del texto en blanco */
+}
+
+/* Estilo para la lista principal del menú */
+.menu {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo para cada ítem del menú */
+.menu-item {
+    padding: 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor a mano cuando pasas por encima */
+    background-color: #444; /* Fondo más claro que el contenedor */
+    border-bottom: 1px solid #555; /* Línea divisoria entre ítems */
+}
+
+/* Estilo cuando pasas el mouse por un ítem del menú */
+.menu-item:hover {
+    background-color: #555; /* Cambia el fondo cuando el ítem está resaltado */
+}
+
+/* Estilo para los submenús */
+.submenu {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding-left: 20px; /* Indentación para diferenciar del menú principal */
+    display: none; /* Oculta el submenú por defecto */
+    margin: 0;
+}
+
+/* Estilo para cada ítem del submenú */
+.submenu li {
+    padding: 10px; /* Espaciado interno */
+    background-color: #666; /* Fondo más claro que el ítem del menú */
+    border-bottom: 1px solid #777; /* Línea divisoria entre ítems del submenú */
+}
+
+/* Estilo cuando pasas el mouse por un ítem del submenú */
+.submenu li:hover {
+    background-color: #777; /* Cambia el fondo cuando el ítem está resaltado */
+}
