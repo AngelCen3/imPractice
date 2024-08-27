@@ -1,0 +1,117 @@
+/* 
+ * Reset CSS 
+ * Este archivo CSS se utiliza para eliminar los estilos predeterminados que los navegadores aplican a los elementos HTML.
+ * Esto ayuda a asegurar que el diseño de la página sea consistente en diferentes navegadores.
+ */
+
+ /* 
+  * Selector universal (*) 
+  * Aplica estilos a todos los elementos del documento.
+  */
+  * {
+    /* 
+     * Elimina todos los márgenes predeterminados de los elementos.
+     * Esto es útil para evitar márgenes no deseados alrededor de los elementos.
+     */
+    margin: 0;
+
+    /* 
+     * Elimina todos los rellenos (padding) predeterminados de los elementos.
+     * Esto es útil para evitar rellenos no deseados dentro de los elementos.
+     */
+    padding: 0;
+
+    /* 
+     * Cambia el modelo de caja de los elementos a 'border-box'.
+     * Con 'border-box', el width y height de un elemento incluyen el contenido, el padding y el borde.
+     * Esto facilita el control del tamaño de los elementos. (Por defecto, el valor de -> content-box )
+     * Esto significa que el width y height de un elemento solo se aplican al contenido, sin incluir padding y border.
+     */
+    box-sizing: border-box;
+}
+
+/* 
+
+ * Nota:
+ * Este es un reset básico. En proyectos más complejos, es posible que desees usar una hoja de estilos de "normalize.css"
+ * que ajusta los estilos predeterminados en lugar de eliminarlos por completo, para mantener consistencia en el diseño 
+ * entre diferentes navegadores.
+ */
+ 
+/* 
+ * Estilo para el cuerpo del documento (body) 
+ * Este bloque centra el contenido en la pantalla completa y le da un fondo suave.
+ */
+ body {
+    margin: 0; /* Elimina márgenes predeterminados alrededor del cuerpo */
+    padding: 0; /* Elimina cualquier relleno (padding) predeterminado */
+    display: flex; /* Utiliza Flexbox para centrar el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Hace que el cuerpo ocupe toda la altura de la ventana */
+    background-color: #f0f4f8; /* Color de fondo suave y claro */
+    font-family: 'Arial', sans-serif; /* Define la fuente para el texto en la página */
+}
+
+/* 
+ * Estilo para el formulario (primeForm) 
+ * Este bloque da estilo al formulario, lo hace elegante y lo centra.
+ */
+.primeForm {
+    background-color: #ffffff; /* Color de fondo blanco para el formulario */
+    border-radius: 12px; /* Bordes redondeados en las esquinas del formulario */
+    padding: 40px; /* Espacio interior alrededor del contenido del formulario */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor del formulario para darle un efecto elevado */
+    max-width: 500px; /* Ancho máximo del formulario para evitar que sea demasiado ancho */
+    width: 100%; /* El formulario ocupará el 100% del espacio disponible dentro del contenedor */
+    box-sizing: border-box; /* Incluye padding y bordes dentro del ancho total del formulario */
+}
+
+/* 
+ * Estilo para la etiqueta (label) 
+ * Este bloque define la apariencia del texto que describe el campo de entrada.
+ */
+.primeForm label {
+    display: block; /* La etiqueta ocupará toda la línea disponible */
+    font-size: 18px; /* Tamaño de fuente más grande para mejor legibilidad */
+    color: #333333; /* Color oscuro para el texto de la etiqueta */
+    margin-bottom: 12px; /* Espacio debajo de la etiqueta para separar el campo de entrada */
+}
+
+/* 
+ * Estilo para el campo de entrada (input[type="number"]) 
+ * Este bloque da estilo al campo de entrada donde el usuario ingresa el número.
+ */
+.primeForm input[type="number"] {
+    width: 100%; /* El campo de entrada ocupará todo el ancho disponible */
+    padding: 12px; /* Espacio interior para hacer que el campo sea más cómodo de usar */
+    margin-bottom: 20px; /* Espacio debajo del campo para separarlo del botón de envío */
+    border-radius: 8px; /* Bordes redondeados para un estilo más suave */
+    border: 1px solid #cccccc; /* Borde gris claro alrededor del campo de entrada */
+    box-sizing: border-box; /* Incluye padding y bordes dentro del ancho total del campo */
+    font-size: 16px; /* Tamaño de fuente para el texto dentro del campo */
+}
+
+/* 
+ * Estilo para el botón de envío (button[type="submit"]) 
+ * Este bloque define la apariencia del botón que envía el formulario.
+ */
+.primeForm button[type="submit"] {
+    background-color: #007bff; /* Color de fondo azul para el botón */
+    color: white; /* Color del texto en el botón (blanco para contraste) */
+    padding: 12px; /* Espacio interior para hacer que el botón sea grande y fácil de hacer clic */
+    border-radius: 8px; /* Bordes redondeados para un estilo más suave */
+    border: none; /* Sin bordes adicionales alrededor del botón */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es clicable */
+    font-size: 18px; /* Tamaño de fuente para el texto en el botón */
+    width: 100%; /* El botón ocupará todo el ancho disponible */
+    transition: background-color 0.3s ease; /* Animación suave cuando se cambia el color de fondo */
+}
+
+/* 
+ * Estilo para el botón de envío al pasar el cursor (hover) 
+ * Este bloque define el cambio de color cuando el usuario pasa el cursor sobre el botón.
+ */
+.primeForm button[type="submit"]:hover {
+    background-color: #0056b3; /* Cambia el color de fondo del botón a un azul más oscuro */
+}
