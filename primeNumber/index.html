@@ -12,5 +12,21 @@
         <input type="number" id="rangeInput" name="rangeInput" required>
         <button type="submit">Submit</button>
     </form>
+    <script>
+        function processForm(event) {
+            event.preventDefault(); //prevent that page reloading -b
+            let lastNumber = document.getElementById('rangeInput').value;            
+
+            const primeNumbers = [];
+
+                for (i = 2; i < lastNumber; i++){
+                  
+                    i%i == 0 ? primeNumbers.push : "Its not a prime number";
+
+
+                }
+            }
+            
+    </script>
 </body>
 </html>
