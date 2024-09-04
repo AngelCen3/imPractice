@@ -1,0 +1,91 @@
+#background {
+  animation: growRect 5s infinite alternate;
+}
+
+@keyframes growRect {
+  0% {
+    width: 124px;
+    height: 124px;
+  }
+  100% {
+    width: 100vw; /* Ocupa todo el ancho de la ventana */
+    height: 100vh; /* Ocupa todo el alto de la ventana */
+  }
+}
+
+/*CSS para Animar el Triángulo (movimiento y rotación)*/
+#triangle {
+  animation: moveAndRotate 5s infinite alternate;
+}
+
+@keyframes moveAndRotate {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  100% {
+    transform: translateX(20px) rotate(360deg);
+  }
+}
+
+/*Other animation*/
+#triangle {
+  animation: shrinkTriangle 4s infinite alternate;
+}
+
+@keyframes shrinkTriangle {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5); /* Reduce a la mitad su tamaño */
+  }
+}
+
+/* CSS para Animar el Círculo (escalar)*/
+#circle {
+  animation: scaleCircle 2s infinite alternate;
+}
+
+@keyframes scaleCircle {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+/*Other animation */
+
+#circle {
+  animation: scaleCircle 3s infinite alternate;
+}
+
+@keyframes scaleCircle {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2); /* Duplica el tamaño */
+  }
+}
+
+/*CSS to animate a diamond*/
+#diamond {
+    animation: animateDiamond 4s infinite alternate;
+}
+
+@keyframes animateDiamond {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(2); /* Duplicar tamaño */
+        opacity: 0.5; /* Semitransparente */
+    }
+    100% {
+        transform: scale(0.5); /* Encoger tamaño */
+        opacity: 0; /* Desaparecer */
+    }
+}
