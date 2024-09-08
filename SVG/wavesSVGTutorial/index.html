@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG WAVES</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="svg-container">
+        <!-- Primer SVG -->
+        <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+          <defs>
+            <!-- Degradado para la primera figura -->
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#FF0066;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#BB004B;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="900" height="600" fill="#FF0066"></rect>
+          <g transform="translate(494.16438626347 286.26628566210434)">
+            <path d="M121.2 -125.4C154.1 -88.4 175.5 -44.2 195.4 19.9C215.2 83.9 233.5 167.8 200.7 203.5C167.8 239.2 83.9 226.6 -2.2 228.8C-88.4 231.1 -176.8 248.1 -233.6 212.4C-290.4 176.8 -315.7 88.4 -304.4 11.3C-293.1 -65.8 -245.2 -131.5 -188.4 -168.5C-131.5 -205.5 -65.8 -213.8 -10.8 -203C44.2 -192.2 88.4 -162.4 121.2 -125.4" fill="#BB004B"></path>
+          </g>
+        </svg>
+    
+        <!-- Segundo SVG (Wave) -->
+        <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="#000">
+          <defs>
+            <!-- Degradado para la onda -->
+            <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#00BFFF;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#1E90FF;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <path d="M0 0v60c9 0 18-3 25-10 13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0c13-14 36-14 50 0c13-14 36-14 50 0c13-14 36-14 50 0c13-14 36-14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0c13-14 36-14 50 0c13-14 36-14 50 0s37 13 50 0c14-14 37-14 50 0 7 7 16 10 25 10V0H0Z"></path>
+        </svg>
+
+
+        <div class="wave-container">
+            <!-- Primera ola -->
+            <div class="wave"></div>
+          </div>
+      </div>
+      <input type="range" id="speedControl" min="1" max="20" value="8" onchange="changeSpeed(this.value)">
+
+    <script src="script.js"></script>
+</body>
+
+</html>

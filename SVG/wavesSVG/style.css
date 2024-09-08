@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #e3f2fd, #ffebee);
+    margin: 0;
+  }
+
+ /* Contenedor para las olas */
+ .wave-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #87CEEB;
+  }
+
+  /* Estilo base para las olas */
+  .wave {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%23000"><path d="M0 0v60c9 0 18-3 25-10 13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0c13-14 36-14 50 0c13-14 36-14 50 0c13-14 36-14 50 0c13-14 36-14 50 0c13-14 36-14 50 0c13-14 36-14 50 0c13-14 36-14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0c13-14 36-14 50 0c13-14 36-14 50 0s37 13 50 0c14-14 37-14 50 0 7 7 16 10 25 10V0H0Z"/></svg>') repeat-x;
+    animation: moveWave 8s linear infinite;
+  }
+
+  /* Definición del movimiento de la ola */
+  @keyframes moveWave {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }

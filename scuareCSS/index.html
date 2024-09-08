@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuadrícula Animada "Hola"</title>
+  <style>
+    /* Estilo general */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      font-family: Arial, sans-serif;
+    }
+
+    /* Contenedor de la cuadrícula */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(15, 40px);
+      grid-template-rows: repeat(7, 40px);
+      gap: 5px;
+      background-color: #222;
+      position: relative;
+    }
+
+    /* Cuadrados individuales */
+    .grid-item {
+      width: 40px;
+      height: 40px;
+      background-color: #444;
+    }
+
+    /* Letras formadas en la cuadrícula */
+    .on {
+      background-color: #00ff00;
+    }
+
+    /* Estilo para la animación */
+    @keyframes moveLeft {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-600px); /* Ajusta el movimiento */
+      }
+    }
+
+    /* Aplicar la animación al contenedor */
+    .animate {
+      animation: moveLeft 10s linear infinite;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container animate" id="grid">
+    <!-- Generamos los cuadrados vacíos en la cuadrícula -->
+    <!-- Letras formadas por la clase "on" en los lugares correctos -->
+  </div>
+
+  <script>
+    const grid = document.getElementById('grid');
+    
+    // Matriz de letras representadas en una cuadrícula 7x15
+    const letters = [
+      // Letra H
+      [1, 0, 0, 1],
+      [1, 0, 0, 1],
+      [1, 1, 1, 1],
+      [1, 0, 0, 1],
+      [1, 0, 0, 1],
+      [0, 0, 0, 0], // Espacio entre letras
+      // Letra O
+      [1, 1, 1, 0],
+      [1, 0, 1, 0],
+      [1, 0, 1, 0],
+      [1, 0, 1, 0],
+      [1, 1, 1, 0],
+      [0, 0, 0, 0], // Espacio entre letras
+      // Letra L
+      [1, 0, 0, 0],
+      [1, 0, 0, 0],
+      [1, 0, 0, 0],
+      [1, 0, 0, 0],
+      [1, 1, 1, 0],
+      [0, 0, 0, 0], // Espacio entre letras
+      // Letra A
+      [1, 1, 1, 1],
+      [1, 0, 0, 1],
+      [1, 0, 0, 1],
+      [1, 1, 1, 1],
+      [0, 0, 0, 0],
+    ];
+
+    // Generar la cuadrícula basada en la matriz
+    function createGrid(letters) {
+      for (let row = 0; row < letters.length; row++) {
+        for (let col = 0; col < 15; col++) {
+          const cell = document.createElement('div');
+          cell.classList.add('grid-item');
+          if (letters[row][col] === 1) {
+            cell.classList.add('on');
+          }
+          grid.appendChild(cell);
+        }
+      }
+    }
+
+    // Crear la cuadrícula de letras
+    createGrid(letters);
+  </script>
+
+</body>
+</html>
