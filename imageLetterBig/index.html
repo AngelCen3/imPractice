@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            position: relative;
+            text-align: center;
+        }
+        .container img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+        .letra-grande {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 15vw;
+            color: rgb(88, 223, 47);
+            font-weight: bold;
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Imagen grande de fondo -->
+        <img src="/imageLetterBig/pretty.jpg" alt="Imagen de fondo">
+        <!-- Letra S grande al frente -->
+        <div class="letra-grande">Welcome!</div>
+    </div>
+</body>
+</html>

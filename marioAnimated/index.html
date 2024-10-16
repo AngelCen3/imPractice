@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotación en el Perímetro</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Círculo central */
+    .circle-center {
+      width: 50px;
+      height: 50px;
+      background-color: #333;
+      border-radius: 50%;
+    }
+
+    /* Círculo rotante */
+    .circle-rotate {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-color: #ff6f61;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform-origin: -80px 0; /* Punto de origen fuera del centro del círculo */
+      animation: rotateCircle 5s infinite linear;
+    }
+
+    /* Animación de rotación */
+    @keyframes rotateCircle {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="circle-center"></div>
+    <div class="circle-rotate"></div>
+  </div>
+
+</body>
+</html>

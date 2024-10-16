@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubo 3D</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            perspective: 800px; /* Añade profundidad a la escena */
+        }
+ 
+        .scene {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotate 5s infinite ease-in-out;
+        }
+
+        .face {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(52, 152, 219, 0.9);
+            border: 2px solid #071118;
+        }
+
+        /* Posición de las caras del cubo */
+        .front  { transform: rotateY(  0deg) translateZ(50px); }
+        .back   { transform: rotateY(180deg) translateZ(50px); }
+        .right  { transform: rotateY( 90deg) translateZ(50px); }
+        .left   { transform: rotateY(-90deg) translateZ(50px); }
+        .top    { transform: rotateX( 90deg) translateZ(50px); }
+        .bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+        /* Animación opcional para rotar el cubo */
+        @keyframes rotate {
+            0%   { transform: rotateX(0deg) rotateY(0deg); }
+            50%  { transform: rotateX(360deg) rotateY(360deg); }
+            100% { transform: rotateX(0deg) rotateY(0deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="scene">
+        <div class="face front"></div>
+        <div class="face back"></div>
+        <div class="face right"></div>
+        <div class="face left"></div>
+        <div class="face top"></div>
+        <div class="face bottom"></div>
+    </div>
+</body>
+</html>
